@@ -34,7 +34,11 @@
   }
 </script>
 
-<li class={`${lookAndFeel}`}>
+<li 
+  style={
+    `margin-left: ${item.spacesIndented * 8}px;`
+  }
+  class={`${lookAndFeel}`}>
   <button
     class="toggle"
     on:click={(ev) => {

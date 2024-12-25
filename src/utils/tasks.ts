@@ -104,6 +104,8 @@ export const parseTodos = async (
     if (!showChecked) {
       todos = todos.filter(todo => !todo.checked)
     }
+    const todoSpaces = todos.map(todo => todo.spacesIndented)
+    console.log(`TODO Spaces for ${fileInfo.file.path}: ${todoSpaces.join(", ")}`)
     todosForUpdatedFiles.set(fileInfo.file, todos)
   }
 
